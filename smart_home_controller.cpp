@@ -33,7 +33,7 @@ void SmartHomeController::sendCommand(const std::string& topic, const std::strin
 		client.publish(pubmsg)->wait_for(std::chrono::seconds(10));
 		std::cout << "Message sent to topic '" << topic << "': " << message << '\n';
 	} catch (const mqtt::exception& e) {
-            std::cerr << "Publish failed: " << e.what() << '\n';
+		std::cerr << "Publish failed: " << e.what() << '\n';
         }
 }
 
